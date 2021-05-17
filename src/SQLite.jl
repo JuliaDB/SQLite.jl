@@ -370,6 +370,7 @@ juliatype(x::Integer) =
     x == SQLITE_INTEGER ? Int64 :
     x == SQLITE_FLOAT ? Float64 :
     x == SQLITE_TEXT ? String :
+    x == SQLITE_NULL ? Missing :
     Any
 
 # convert SQLite declared type into Julia equivalent,
